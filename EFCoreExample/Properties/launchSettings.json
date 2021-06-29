@@ -1,0 +1,15 @@
+﻿{
+    "profiles": 
+    {
+        "EFCoreExample": 
+        {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "applicationUrl": "http://localhost:4444",
+            "environmentVariables": 
+            {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    }
+}
