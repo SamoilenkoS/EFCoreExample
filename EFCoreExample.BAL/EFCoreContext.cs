@@ -1,11 +1,11 @@
-﻿using EFCoreExample.BAL.Models;
+﻿using EFCoreExample.BAL.OutputModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreExample.BAL
 {
     public class EfCoreContext : DbContext
     {
-        public DbSet<Book> Books { get; set; }
+        public DbSet<DbBook> Books { get; set; }
 
         public EfCoreContext(DbContextOptions<EfCoreContext> options) : base(options)
         {

@@ -1,3 +1,4 @@
+using System.Reflection;
 using EFCoreExample.BAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,7 +25,14 @@ namespace EFCoreExample
             services.AddControllers();
             services.AddDbContext<EfCoreContext>(options =>
                 options.UseSqlServer(_configuration["ConnectionStrings:DefaultConnection"]));
-            services.AddTransient<BooksService, BooksService>();
+            services.AddTransient<IBooksService, BooksService>();
+
+            var assemblies = new[]
+            {
+                Assembly.GetAssembly(typeof(BookMappingProfile)), //api
+            };
+
+            services.AddAutoMapper(assemblies);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

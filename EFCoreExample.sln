@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreExample", "EFCoreExample\EFCoreExample.csproj", "{1D927389-A97B-48B6-9F0B-6D482E423B91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreExample", "EFCoreExample\EFCoreExample.csproj", "{1D927389-A97B-48B6-9F0B-6D482E423B91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreExample.BAL", "EFCoreExample.BAL\EFCoreExample.BAL.csproj", "{8E3491B4-D3E0-4E32-B28F-81B3B49ECBB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreExample.BAL", "EFCoreExample.BAL\EFCoreExample.BAL.csproj", "{8E3491B4-D3E0-4E32-B28F-81B3B49ECBB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreExample.Tests", "EFCoreExample.IntegrationTests\EFCoreExample.Tests.csproj", "{69DB7D39-0266-467D-9821-6BF36A638DC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8E3491B4-D3E0-4E32-B28F-81B3B49ECBB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E3491B4-D3E0-4E32-B28F-81B3B49ECBB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E3491B4-D3E0-4E32-B28F-81B3B49ECBB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69DB7D39-0266-467D-9821-6BF36A638DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69DB7D39-0266-467D-9821-6BF36A638DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69DB7D39-0266-467D-9821-6BF36A638DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69DB7D39-0266-467D-9821-6BF36A638DC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

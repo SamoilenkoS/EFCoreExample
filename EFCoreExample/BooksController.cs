@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using EFCoreExample.BAL.Models;
+using EFCoreExample.BAL;
 
 namespace EFCoreExample
 {
@@ -10,9 +11,9 @@ namespace EFCoreExample
     [ApiController]
     public class BooksController : Controller
     {
-        private readonly BooksService _booksService;
+        private readonly IBooksService _booksService;
 
-        public BooksController(BooksService booksService)
+        public BooksController(IBooksService booksService)
         {
             _booksService = booksService;
         }
@@ -26,7 +27,6 @@ namespace EFCoreExample
         [HttpPost]
         public async Task AddBook(Book book)
         {
-            book.Id = Guid.NewGuid();
             await _booksService.AddBook(book);
         }
     }
