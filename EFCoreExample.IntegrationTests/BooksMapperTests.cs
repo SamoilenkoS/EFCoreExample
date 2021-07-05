@@ -12,16 +12,17 @@ namespace EFCoreExample.IntegrationTests
     public class BooksMapperTests
     {
         private IMapper _mapper;
+
         public BooksMapperTests()
         {
-            var mce = new MapperConfigurationExpression();
+            var mapperConfigurationExpression = new MapperConfigurationExpression();
 
-            mce.AddMaps(typeof(BookMappingProfile).Assembly);
+            mapperConfigurationExpression.AddMaps(typeof(BookMappingProfile).Assembly);
 
-            var mc = new MapperConfiguration(mce);
-            mc.AssertConfigurationIsValid();
+            var mapperConfiguration = new MapperConfiguration(mapperConfigurationExpression);
+            mapperConfiguration.AssertConfigurationIsValid();
 
-            _mapper = new Mapper(mc);
+            _mapper = new Mapper(mapperConfiguration);
         }
 
         [Test]
